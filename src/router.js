@@ -40,6 +40,12 @@ route.get("/manageComplaints", (req, res) => {
 route.get("/add_user", (req, res) => {
     res.render("add_user")
 })
+route.get("/add_visitor", (req, res) => {
+    res.render("add_visitor")
+})
+route.get("/visitors", (req, res) => {
+    res.render("visitors")
+})
 
 
 route.get("/notices", (req, res) => {
@@ -52,12 +58,39 @@ route.get("/notices", (req, res) => {
         })
 })
 
+// route.post("/visitors", (req,res)=>{
+//     if (!req.body) {
+//         res.status(400).send({ message: "Content can not be emtpy!" });
+//         return;
+//     }
+
+//     // new user
+//     const visitor = new Visitor({
+//         name: req.body.name,
+//         phone: req.body.phone,
+//         gender: req.body.gender
+//     })
+
+//     // save user in the database
+//     user
+//         .save(user)
+//         .then(data => {
+//             //res.send(data)
+//             res.redirect('/add_visitor');
+//         })
+//         .catch(err => {
+//             res.status(500).send({
+//                 message: err.message || "Some error occurred while creating a create operation"
+//             });
+//         });
+// })
+
+
 
 
 //API
-route.post('/api/users',controller.create)
-route.get('/api/users',controller.find)
-route.delete('/api/users',controller.delete)
+route.post('/api/users', controller.create)
+route.get('/api/users', controller.find)
 
 
 module.exports = route

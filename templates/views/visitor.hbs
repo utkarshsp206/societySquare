@@ -1,10 +1,12 @@
+{{!-- SIMILAR TO NOTICES.HBS --}}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notices</title>
+    <title>Visitors</title>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -147,13 +149,13 @@ table{
       <nav>
         <div class="container">
           <div class="text-center">
-            <a href="/" class="nav-brand text-dark">Notices</a>
+            <a href="/" class="nav-brand text-dark">Visitors</a>
           </div>
         </div>
       </nav>
     </header>
 
-    {{!-- Header --}}
+    {{!-- Header Ends--}}
 
 
     {{!-- Main Site --}}
@@ -161,12 +163,12 @@ table{
     <main id="site-main">
       <div class="container">
         <div class="box-nav d-flex-justify-between">
-          <a href="/add_user" class="border-shadow">
-            <span class="text-gradient">New Notice<i class="fa-solid fa-pencil"></i></span>
+          <a href="/add_visitor" class="border-shadow">
+            <span class="text-gradient">New Visitor<i class="fa-solid fa-pencil"></i></span>
           </a>
         </div>
 
-        {{!-- From handling --}}
+        {{!-- Form handling --}}
         <form action="/" method="POST">
           <table class="table">
             <thead class="thead-dark">
@@ -180,22 +182,14 @@ table{
               </tr>
             </thead>
             <tbody>
-              {{#each users}}
+              {{#each visitors}}
               <tr>
                 <td>{{@index}}</td>
                 <td>{{name}}</td>
                 <td>{{email}}</td>
                 <td>{{gender}}</td>
                 <td>{{status}}</td>
-                {{!-- <td>
-                  <a href="/update-user?id={{_id}}" class="btn border-shadow
-                    update">
-                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                  </a>
-                  <a class="btn border-shadow delete" data-id="{{_id}}">
-                    <span class="text-gradient"><i class="fas fa-times"></i></span>
-                  </a>
-                </td> --}}
+                
               </tr>
               {{/each}}
 

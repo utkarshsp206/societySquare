@@ -59,6 +59,20 @@ app.post("/contact", async (req, res) => {
         res.status(400).send(error)
     }
 })
+app.post("/add_visitor", async (req, res) => {
+    try {
+        const add_visitor = new Visitor({
+            name: req.body.name,
+            phone: req.body.phone,
+            gender: req.body.gender
+        })
+        const visited = await add_visitor.save();
+        res.status(201).render("add_visitor");
+
+    } catch (error) {
+        res.status(400).send(error)
+    }
+})
 
 
 app.listen(port, () => {

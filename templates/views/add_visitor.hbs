@@ -1,3 +1,4 @@
+{{!-- SIMILAR TO ADD_USER.HBS --}}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -188,7 +189,8 @@ table{
 
 </style>
     <body>
-      {{>adminNavbar}}
+        {{>adminNavbar}}
+
 
         {{!-- Header --}}
 
@@ -196,7 +198,7 @@ table{
             <nav>
                 <div class="container">
                     <div class="text-center">
-                        <a href="/" class="nav-brand text-dark">Notices</a>
+                        <a href="/" class="nav-brand text-dark">Visitors</a>
                     </div>
                 </div>
             </nav>
@@ -211,18 +213,18 @@ table{
             <div class="container">
                 <div class="box-nav d-flex-justify-between">
                     <div class="filter">
-                        <a href="/notices"><i class="fas fa-angle-double-left"></i>All
-                            Notices</a>
+                        <a href="/visitor"><i class="fas fa-angle-double-left"></i>All
+                            Visitors</a>
                     </div>
                 </div>
                 <div class="form-title text-center">
-                    <h2 class="text-dark">New Notice</h2>
-                    <span class="text-light">Use below form to issue a new
-                        Notice</span>
+                    <h2 class="text-dark">New Visitor</h2>
+                    <span class="text-light">Use below form to add a new
+                        Visitor</span>
                 </div>
 
                 {{!-- From handling --}}
-                <form action="/api/users" method="POST" id="add_user">
+                <form action="/add_visitor" method="POST" id="add_user">
                     <div class="new_user">
                         <div class="form-group">
                             <label for="name" class="text-light">Name</label>
@@ -231,9 +233,9 @@ table{
                                 placeholder="Mark Stoinis">
                         </div>
                         <div class="form-group">
-                            <label for="Email" class="text-light">Email</label>
-                            <input type="text" name="email" value=""
-                                placeholder="Example@gmail.com">
+                            <label for="Phone" class="text-light">Phone</label>
+                            <input type="number" name="phone" value=""
+                                placeholder="9027892767">
                         </div>
                         <div class="form-group">
                             <label for="gender" class="text-light">Gender</label>
@@ -247,7 +249,7 @@ table{
                                 <label for="gender" class="text-light">Female</label>
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{!-- <div class="form-group">
                             <label for="gender" class="text-light">Status</label>
                             <div class="radio inline">
                                 <input type="radio" name="status" value="Male">
@@ -258,7 +260,7 @@ table{
                                     value="Female">
                                 <label for="gender" class="text-light">Inactive</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <button type="submit" class="btn text-dark update">Save</button>
                         </div>
