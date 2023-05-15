@@ -76,7 +76,7 @@ a{
 }
 
 .text-light{
-  color: var(--light);
+  color: var(--light) !important;
 }
 
 .text-gradient{
@@ -212,10 +212,6 @@ table{
         <main id="site-main">
             <div class="container">
                 <div class="box-nav d-flex-justify-between">
-                    <div class="filter">
-                        <a href="/visitor"><i class="fas fa-angle-double-left"></i>All
-                            Visitors</a>
-                    </div>
                 </div>
                 <div class="form-title text-center">
                     <h2 class="text-dark">New Visitor</h2>
@@ -233,7 +229,7 @@ table{
                                 placeholder="Mark Stoinis">
                         </div>
                         <div class="form-group">
-                            <label for="Phone" class="text-light">Phone</label>
+                            <label for="Phone" class="text-light" style="color:#06d6a0">Phone</label>
                             <input type="number" name="phone" value=""
                                 placeholder="9027892767">
                         </div>
@@ -249,18 +245,6 @@ table{
                                 <label for="gender" class="text-light">Female</label>
                             </div>
                         </div>
-                        {{!-- <div class="form-group">
-                            <label for="gender" class="text-light">Status</label>
-                            <div class="radio inline">
-                                <input type="radio" name="status" value="Male">
-                                <label for="gender" class="text-light">Active</label>
-                            </div>
-                            <div class="radio inline">
-                                <input type="radio" name="status"
-                                    value="Female">
-                                <label for="gender" class="text-light">Inactive</label>
-                            </div>
-                        </div> --}}
                         <div class="form-group">
                             <button type="submit" class="btn text-dark update">Save</button>
                         </div>

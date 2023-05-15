@@ -2,8 +2,8 @@ const mongoose = require("mongoose")
 
 const visitorSchema = new mongoose.Schema({
     name: String,
-    phone: Number,
-    gender: String
+    email: String,
+    address: String
 
 })
 

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Home</title>
-
+    <title>User Home</title>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet">
@@ -29,6 +28,7 @@
     <!-- SWIPER JS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
       />
+
     <style>
     .bg-wrapper {
       min-height: 100vh;
@@ -44,10 +44,13 @@
   </head>
 
   <body>
-     {{>adminNavbar}}
+    {{>userNavbar}}
     <div class="bg-wrapper">
-
-     
+      <!-- NAVBAR BEGIN -->
+      <section class="home-nav fixed-top">
+      
+      </section>
+      <!-- NAVBAR END -->
       <div class="home-container">
         <div class="row">
           <div class="col-md-7 order-last order-md-first align-self-center">
@@ -65,6 +68,26 @@
           </div>
         </div>
       </div>
+      <div id="carouselExampleIndicators" class="carousel slide"
+        data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0"
+            class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+     
+        <a class="carousel-control-prev" href="#carouselExampleIndicators"
+          role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators"
+          role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <div class="row" style="background-color: #cfcfcf;">
         <div class="col-12 py-2 text-center font-weight-bold"
           style="font-size:2rem;text-transform: uppercase;">Our
@@ -80,7 +103,7 @@
                 <i class="fas fa-home"></i>
               </div>
               <p class="card-heading font-weight-bold"
-                style="font-size:1.5rem;color: #4C5656;"><a href="/suggestionTable">View Suggestions</a></p>
+                style="font-size:1.5rem;color: #4C5656;"><a href="/suggestion">Suggestion</a></p>
             </div>
           </div>
           <div class="card card2 shadow justify-content-center
@@ -91,8 +114,7 @@
                 <i class="fas fa-users"></i>
               </div>
               <p class="card-heading font-weight-bold"
-                style="font-size:1.5rem;color: #4C5656;"><a
-                  href="/resident">Resident Details</a></p>
+                style="font-size:1.5rem;color: #4C5656;"><a href="/profile">Users Profile</a></p>
             </div>
           </div>
           <div class="card card3 shadow justify-content-center
@@ -103,8 +125,9 @@
                 <i class="fas fa-money-bill"></i>
               </div>
               <p class="card-heading font-weight-bold"
-                style="font-size:1.5rem;color: #4C5656;"><a href="/bills">Manage
-                  Bills</a></p>
+                style="font-size:1.5rem;color: #4C5656;"><a
+                  href="https://ramkrishna0102.github.io/payment"
+                  target="_blank">Pay Maintenance</a></p>
             </div>
           </div>
           <div class="card card4 shadow justify-content-center
@@ -115,8 +138,8 @@
                 <i class="fas fa-user-friends"></i>
               </div>
               <p class="card-heading font-weight-bold"
-                style="font-size:1.5rem;color: #4C5656;"><a href="/visitor">Manage
-                  Visitors</a></p>
+                style="font-size:1.5rem;color: #4C5656;"><a
+                  href="/visitor">Add Visitor</a></p>
             </div>
           </div>
           <div class="card card5 shadow justify-content-center
@@ -127,8 +150,7 @@
                 <i class="fas fa-notes-medical"></i>
               </div>
               <p class="card-heading font-weight-bold"
-                style="font-size:1.5rem;color: #4C5656;"><a
-                  href="/complainTable">Manage Complaints</a></p>
+                style="font-size:1.5rem;color: #4C5656;"> <a href="/complaints">File Complaints</a></p>
             </div>
           </div>
         </div>
@@ -238,16 +260,52 @@
       <div class="row">
         <div class="col-12 py-5">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Society Sqaure</span>
+            <span>Copyright &copy; Section 813-A </span>
           </div>
         </div>
       </div>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
     </body>
 
+    <!-- <body>
+  <section class="home-nav fixed-top">
+  ADD NAVBAR HERE 
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand logo" href="#">Society Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link home-links" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link home-links" href="login.php">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+  </section>
+
+  <div class='carousel-wrapper'>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="vendor/img/carousel/car6.png" alt=""></div>
+        <div class="swiper-slide"><img src="vendor/img/carousel/car2.png" alt=""></div>
+        <div class="swiper-slide"><img src="vendor/img/carousel/car5.png" alt=""></div>
+        <div class="swiper-slide"><img src="vendor/img/carousel/car9.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="vendor/img/carousel/car8.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="vendor/img/carousel/car10.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1000px" >
+
+  </div> -->
     <section>
       <!-- ADD DESCRIPTION HERE -->
     </section>
@@ -266,6 +324,26 @@
     <script src="vendor/js/sb-admin-2.min.js"></script>
     <!-- SWIPER JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+    });
+  </script> -->
     <script>
   $(document).ready(function () {
     $(window).scroll(function () {

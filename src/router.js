@@ -19,6 +19,9 @@ route.get("/about", (req, res) => {
 route.get("/adminHome", (req, res) => {
     res.render("adminHome")
 })
+route.get("/userHome", (req, res) => {
+    res.render("userHome")
+})
 route.get("/contact", (req, res) => {
     res.render("contact")
 })
@@ -34,17 +37,32 @@ route.get("/manageBills", (req, res) => {
 route.get("/manageVisitors", (req, res) => {
     res.render("manageVisitors")
 })
-route.get("/manageComplaints", (req, res) => {
-    res.render("manageComplaints")
+route.get("/complaints", (req, res) => {
+    res.render("complaints")
 })
 route.get("/add_user", (req, res) => {
     res.render("add_user")
 })
-route.get("/add_visitor", (req, res) => {
-    res.render("add_visitor")
+route.get("/bills", (req, res) => {
+    res.render("bills")
 })
-route.get("/visitors", (req, res) => {
-    res.render("visitors")
+route.get("/resident", (req, res) => {
+    res.render("resident")
+})
+route.get("/complainTable", (req, res) => {
+    res.render("complainTable")
+})
+route.get("/suggestionTable", (req, res) => {
+    res.render("suggestionTable")
+})
+route.get("/suggestion", (req, res) => {
+    res.render("suggestion")
+})
+route.get("/profile", (req, res) => {
+    res.render("profile")
+})
+route.get("/login", (req, res) => {
+    res.render("login")
 })
 
 
@@ -91,6 +109,7 @@ route.get("/notices", (req, res) => {
 //API
 route.post('/api/users', controller.create)
 route.get('/api/users', controller.find)
+
 
 
 module.exports = route

@@ -5,6 +5,7 @@ const hbs = require("hbs");
 require("./db/conn");
 const Register = require("./model/registers")
 const Contact = require("./model/contacts")
+const Visitor = require("./model/visitors")
 
 const port = process.env.PORT || 3000;
 
@@ -22,8 +23,13 @@ app.use(express.urlencoded({ extended: false }))
 
 
 // GET REQUESTS
+app.get("/visitor", (req, res) => {
+    res.render("visitor")
+})
+
+
 // All the get requests are in router.js file
-app.use("/",require("./router"))
+app.use("/", require("./router"))
 
 // POST REQUESTS 
 app.post("/register", async (req, res) => {
@@ -59,18 +65,20 @@ app.post("/contact", async (req, res) => {
         res.status(400).send(error)
     }
 })
-app.post("/add_visitor", async (req, res) => {
+
+app.post("/visitor", async (req, res) => {
     try {
-        const add_visitor = new Visitor({
+        const visitor = new Visitor({
             name: req.body.name,
-            phone: req.body.phone,
-            gender: req.body.gender
+            email: req.body.email,
+            address: req.body.address
         })
-        const visited = await add_visitor.save();
-        res.status(201).render("add_visitor");
+        const visited = await visitor.save();
+        res.status(201).render("visitor");
 
     } catch (error) {
         res.status(400).send(error)
+        console.log(error)
     }
 })
 
