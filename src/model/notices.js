@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 const noticeSchema = new mongoose.Schema({
     name: String,
     email: String,
-    gender: String,
-    status: String
+    department: String,
+    notice: String
 
 })
 

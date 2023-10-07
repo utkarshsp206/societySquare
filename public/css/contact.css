@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     flex-direction: column;
-    background: url(../images/societyimgContact.jpg);
+    background: url(../images/contact.png);
     background-size: cover;
 }
 
@@ -57,7 +57,7 @@
 .container .contactInfo .box .icon {
     min-width: 60px;
     height: 60px;
-    background: white;
+    background: rgba(40, 250, 3, 0.492);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,9 +69,9 @@
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: white;
+    color: black;
     flex-direction: column;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .container .contactInfo .box .text h3 {
