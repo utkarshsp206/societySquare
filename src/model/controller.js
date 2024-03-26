@@ -12,8 +12,8 @@ exports.create = (req, res) => {
     const user = new Notice({
         name: req.body.name,
         email: req.body.email,
-        gender: req.body.gender,
-        status: req.body.status
+        department: req.body.department,
+        notice: req.body.notice
     })
 
     // save user in the database
